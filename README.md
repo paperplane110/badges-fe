@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Badges-FE
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The front end of `Badges`.
 
 ## Setup
 
