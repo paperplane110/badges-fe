@@ -3,4 +3,7 @@ export default defineNuxtConfig({
     modules: [
         'nuxt-windicss',
     ],
+    css: [
+        "@fontsource/material-icons",
+    ]
 })

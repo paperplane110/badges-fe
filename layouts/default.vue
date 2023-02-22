@@ -17,7 +17,7 @@
                     </NuxtLink>
                 </div>
                 <div>
-                    <button class="grid place-items-center j w-12 h-12 rounded-1 bg-sky-600 text-white">
+                    <button class="grid place-items-center w-12 h-12 rounded-1 bg-sky-600 text-white text-xl">
                         Ty
                     </button>
                 </div>
