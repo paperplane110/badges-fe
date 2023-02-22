@@ -1,5 +1,6 @@
 <template>
-    <div id="one-project" class="relative flex flex-col bg-green-50 p-4 my-4 rounded-2xl shadow-sm">
+    <div id="one-project"
+        class="relative flex flex-col bg-green-50 p-4 my-4 rounded-2xl shadow-sm transition hover:shadow-md">
         <div id="funtions" class="absolute right-4 flex gap-2">
             <Btn class="bg-emerald-100 rounded-1" title="Edit">
                 <!-- TODO: Edit the project -->
@@ -64,7 +65,7 @@ const expandKr = () => {
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-    transition: opacity 0.2s ease;
+    transition: opacity 0.1s ease;
 }
 
 .v-enter-from,

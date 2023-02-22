@@ -12,21 +12,12 @@
             <div class="flex mt-10 mb-4 text-4xl font-bold">Badges<p class="font-bold text-green-500">.</p>
             </div>
             <div class="bg-green-50 p-4 grid grid-cols-15 rounded-2xl shadow-sm">
-                <div
-                    class="flex justify-center items-center h-80px w-80px bg-orange-300 rounded-1 text-5xl shadow shadow-md">
-                    🍎
-                </div>
-                <div
-                    class="flex justify-center items-center h-80px w-80px bg-amber-300 rounded-1 text-5xl shadow shadow-md">
-                    🚴
-                </div>
-                <div class="flex justify-center items-center h-80px w-80px bg-lime-300 rounded-1 text-5xl shadow shadow-md">
-                    ♻️
-                </div>
-                <div class="flex justify-center items-center h-80px w-80px bg-sky-300 rounded-1 text-5xl shadow shadow-md">
-                    💪
-                </div>
-                <Badge pattern="B" bg-color="bg-emerald-300" :progress="22" />
+                <Badge pattern="🍎" bg-color="bg-orange-300" />
+                <Badge pattern="🚴" bg-color="bg-amber-300" />
+                <Badge pattern="♻️" bg-color="bg-lime-300" />
+                <Badge pattern="💪" bg-color="bg-sky-300" />
+                <Badge class="text-white font-bold transform rotate-20" pattern="₿" bg-color="bg-amber-500"
+                    :progress="22" />
             </div>
         </div>
         <div id="projects" class="mb-8">

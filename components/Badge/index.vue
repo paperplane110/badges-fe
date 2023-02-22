@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center h-80px w-80px rounded-1 text-5xl shadow shadow-md"
+    <div class="flex justify-center items-center h-80px w-80px rounded-1 text-5xl shadow shadow-md transition duration-1000 hover:(transform rotate-y-360)"
         :class="[props.bgColor, 'filter', saturateEffect, opacityEffect]">
         {{ props.pattern }}
     </div>
