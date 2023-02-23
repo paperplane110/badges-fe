@@ -12,10 +12,10 @@
             <div class="flex mt-10 mb-4 text-4xl font-bold">Badges<p class="font-bold text-green-500">.</p>
             </div>
             <div class="bg-green-50 p-4 grid grid-cols-15 rounded-2xl shadow-sm">
-                <Badge pattern="🍎" bg-color="bg-orange-300" />
-                <Badge pattern="🚴" bg-color="bg-amber-300" />
+                <Badge pattern="🍑" bg-color="bg-orange-300" />
+                <Badge pattern="🚴" bg-color=" bg-amber-300" />
                 <Badge pattern="♻️" bg-color="bg-lime-300" />
-                <Badge pattern="💪" bg-color="bg-sky-300" />
+                <Badge pattern="🏊" bg-color="bg-sky-300" />
                 <Badge class="text-white font-bold transform rotate-20" pattern="₿" bg-color="bg-amber-500"
                     :progress="22" />
             </div>
@@ -26,6 +26,24 @@
             <div>
                 <Project v-bind="appleProject" />
                 <Project v-bind="bikeProject" />
+                <div id="one-project"
+                    class="relative flex flex-col bg-gray-50 p-4 my-4 rounded-2xl shadow-sm transition hover:shadow-md">
+                    <div id="p-title" class="flex items-center gap-4">
+                        <Badge pattern="❓" bg-color="bg-gray-200" :progress="0" />
+                        <div>
+                            <div class="text-3xl mb-1">
+                                Wanna get another badge?
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div id="tag" class="font-bold">
+                                    #Tag
+                                </div>
+                                <ProgressBar :progress="0" />
+                                <div class="font-bold">🐢0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -70,7 +88,7 @@ const bikeProject = {
     briefInfo: {
         pattern: "🚴",
         bgColor: "bg-amber-300",
-        progress: 50,
+        progress: 0,
         projectName: "Go to work by bike in Feb.",
         projectIndex: 2,
         tag: "Health",

@@ -65,7 +65,7 @@ const expandKr = () => {
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-    transition: opacity 0.1s ease;
+    transition: opacity 0.2s ease;
 }
 
 .v-enter-from,
