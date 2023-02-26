@@ -12,6 +12,7 @@
     "nuxt-windicss": "^2.6.0"
   },
   "dependencies": {
-    "@fontsource/material-icons": "^4.5.4"
+    "@fontsource/material-icons": "^4.5.4",
+    "pinia": "^2.0.32"
   }
 }
