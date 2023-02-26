@@ -1,9 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: [
-        'nuxt-windicss',
-    ],
-    css: [
-        "@fontsource/material-icons",
-    ]
+  modules: [
+    'nuxt-windicss',
+    '@pinia/nuxt'
+  ],
+  css: [
+    "@fontsource/material-icons",
+  ]
 })

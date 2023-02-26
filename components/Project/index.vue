@@ -20,12 +20,12 @@
         </span>
       </Btn>
     </div>
-    <ProjectBrief v-bind="props.briefInfo" />
+    <ProjectBrief :name="props.name" :idx="props.idx" :progress="props.progress" :tag="props.tag" :pattern="props.pattern"
+      :bg-color="props.bgColor" />
     <Transition>
       <div v-if="isShow" class="ml-10 mt-4 px-4 border-l transition-all">
         <div v-if="props.krList.length !== 0" class="flex flex-col gap-2 ">
-          <Kr v-for="(krInfo, idx) in props.krList" :key="idx" v-bind="krInfo">
-            {{ krInfo.contents }}
+          <Kr v-for="(krInfo, idx) in props.krList" :key="idx" v-bind="krInfo" :pIdx="props.idx">
           </Kr>
         </div>
         <p v-else class="py-2 text-lg">
@@ -44,14 +44,14 @@
 <script setup lang='ts'>
 
 type projectProps = {
-  briefInfo: {
-    pattern: string
-    bgColor: string
-    progress: number
-    projectName: string
-    projectIndex: number
-    tag: string
-  }
+  name: string
+  idx: number
+  progress: number
+  tag: string
+
+  pattern: string
+  bgColor: string
+
   krList: object[]
 }
 

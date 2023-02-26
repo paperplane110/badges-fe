@@ -770,6 +770,14 @@
     vite-plugin-checker "^0.5.5"
     vue-bundle-renderer "^1.0.1"
 
+"@pinia/nuxt@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.npmmirror.com/@pinia/nuxt/-/nuxt-0.4.7.tgz#dc1bd597869043fc4ef8c14977454c7b909ba5d0"
+  integrity sha512-ifgA9PO/jmPlK1e/HtkrZa7OMSL8EUOpo8Z1O5vNLRr/OZ42kKGEaY1NbIoCz6dIf/pbkATTNHJmcrlPCo3zSA==
+  dependencies:
+    "@nuxt/kit" "^3.0.0"
+    pinia ">=2.0.31"
+
 "@planetscale/database@^1.5.0":
   version "1.5.0"
   resolved "https://registry.npmmirror.com/@planetscale/database/-/database-1.5.0.tgz#073d9ca9841ad62896a6e31f610e89112e6264ef"
@@ -3427,7 +3435,7 @@ pify@^2.3.0:
   resolved "https://registry.npmmirror.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
-pinia@^2.0.32:
+pinia@>=2.0.31, pinia@^2.0.32:
   version "2.0.32"
   resolved "https://registry.npmmirror.com/pinia/-/pinia-2.0.32.tgz#93a12df4416566c1bb49225a078fe20b982350be"
   integrity sha512-8Tw4OrpCSJ028UUyp0gYPP/wyjigLoEceuO/x1G+FlHVf73337e5vLm4uDmrRIoBG1hvaed/eSHnrCFjOc4nkA==
