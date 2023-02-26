@@ -1,28 +1,31 @@
 <template>
   <div class="group flex items-center gap-4 p-3 rounded-2xl max-w-150 cursor-pointer hover:(bg-gray-200)" @click="press">
     <div class="pushable">
-      <span class="front" :class="status ? 'done' : ''">✓</span>
+      <span class="front" :class="props.status">✓</span>
     </div>
-    <slot></slot>
+    {{ props.contents }}
   </div>
 </template>
 
 <script setup lang='ts'>
+const store = useStore()
+
 type krProps = {
+  pIdx: number
+  idx: number
+  contents: string
   status: string
 }
 const props = defineProps<krProps>()
 
-const statusColor = computed(() => {
-  if (props.status === 'done') return "bg-emerald-400"
-  else if (props.status === 'beyond') return "bg-indigo-400"
-  else return "bg-gray-400"
-})
-
-const status = ref(false)
-
 const press = () => {
-  status.value = !status.value
+  // change status
+  const cur = store.projectList[props.pIdx].krList[props.idx].status
+  if (cur === 'undone') {
+    store.changeKrStatus(props.pIdx, props.idx, 'done')
+  } else {
+    store.changeKrStatus(props.pIdx, props.idx, 'undone')
+  }
 }
 </script>
 

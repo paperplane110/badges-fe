@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col max-w-1024px">
-
     <div class="my-8">
       <p class="text-5xl font-bold">Home<span class="text-violet-500">.</span></p>
       <br />
@@ -33,8 +32,7 @@
       <div class="flex mt-10 mb-4 text-4xl font-bold">Projects<p class="font-bold text-blue-500">.</p>
       </div>
       <div>
-        <Project v-bind="appleProject" />
-        <Project v-bind="bikeProject" />
+        <Project v-for="p in store.projectList" :key="p.idx" v-bind="p" />
         <div id="one-project"
           class="relative flex flex-col bg-gray-50 p-4 my-4 rounded-2xl shadow-sm transition hover:shadow-md">
           <div id="p-title" class="flex items-center gap-4">
@@ -59,50 +57,8 @@
 </template>
 
 <script setup lang='ts'>
+import { useStore } from '@/composables/store'
 
-const appleProject = {
-  briefInfo: {
-    pattern: "🍎",
-    bgColor: "bg-orange-300",
-    progress: 60,
-    projectName: "Eat an apple everyday in Feb.",
-    projectIndex: 1,
-    tag: "Health",
-  },
-  krList: [
-    {
-      contents: "Buy 30 apples",
-      status: "done"
-    },
-    {
-      contents: "Eat an apple everyday in the 1st week.",
-      status: "done"
-    },
-    {
-      contents: "Eat an apple everyday in the 2nd week.",
-      status: "done"
-    },
-    {
-      contents: "Eat an apple everyday in the 3rd week.",
-      status: "undone"
-    },
-    {
-      contents: "Eat an apple everyday in the 4th week.",
-      status: "undone"
-    },
-  ]
-}
-
-const bikeProject = {
-  briefInfo: {
-    pattern: "🚴",
-    bgColor: "bg-amber-300",
-    progress: 0,
-    projectName: "Go to work by bike in Feb.",
-    projectIndex: 2,
-    tag: "Health",
-  },
-  krList: [],
-}
+const store = useStore()
 
 </script>
