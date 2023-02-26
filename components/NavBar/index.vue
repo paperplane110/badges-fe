@@ -50,8 +50,8 @@
 
         </NuxtLink>
       </div>
-      <div class="flex items-center gap-5">
-        <NuxtLink class="text-lg hover:(underline)" to="https://github.com/paperplane110/badges-fe" target="_blank">
+      <div class="flex items-center">
+        <NuxtLink class="text-lg mr-12 hover:(underline)" to="https://github.com/paperplane110/badges-fe" target="_blank">
           Github<span class="material-icons align-middle">open_in_new</span>
         </NuxtLink>
         <button class="grid place-items-center w-12 h-12 rounded-1 bg-sky-600 text-white text-xl">

@@ -9,9 +9,19 @@
       <p>And most importantly, set your projects then get shining badges🏅</p>
     </div>
     <div id="bagdes">
-      <div class="flex mt-10 mb-4 text-4xl font-bold">Badges<p class="font-bold text-green-500">.</p>
+      <div class="flex mt-10 mb-4 text-4xl font-bold">
+        <div>Badges<span class="font-bold text-green-500">.</span></div>
       </div>
-      <div class="bg-green-50 p-4 grid grid-cols-15 rounded-2xl shadow-sm">
+      <div
+        class="relative bg-gradient-to-r from-blue-100 to-green-100 p-4 grid grid-cols-15 rounded-2xl transition-shadow duration-300 hover:(shadow-md)">
+        <div class="absolute top-4 right-4">
+          <Btn class="rounded-1" title="Share">
+            <!-- TODO: Generate sharing card -->
+            <span class="material-icons text-green-700">
+              share
+            </span>
+          </Btn>
+        </div>
         <Badge pattern="🍑" bg-color="bg-orange-300" />
         <Badge pattern="🚴" bg-color=" bg-amber-300" />
         <Badge pattern="♻️" bg-color="bg-lime-300" />
