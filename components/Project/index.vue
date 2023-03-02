@@ -24,7 +24,7 @@
       :bg-color="props.bgColor" />
     <Transition>
       <div v-if="isShow" class="ml-10 mt-4 px-4 border-l transition-all">
-        <div v-if="props.krList.length !== 0" class="flex flex-col gap-2 ">
+        <div v-if="props.krList.length !== 0" class="flex flex-col ">
           <Kr v-for="(krInfo, idx) in props.krList" :key="idx" v-bind="krInfo" :pIdx="props.idx">
           </Kr>
         </div>
@@ -35,9 +35,6 @@
         </p>
       </div>
     </Transition>
-    <!-- <div class="flex mt-4 justify-center">
-                                                <button class="bg-green-200 px-2 rounded-lg">👆Hide</button>
-                                                </div> -->
   </div>
 </template>
 
@@ -59,7 +56,6 @@ const props = defineProps<projectProps>()
 
 const isShow = ref(false)
 const expandKr = () => {
-
   isShow.value = !isShow.value
 }
 </script>

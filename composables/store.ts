@@ -32,6 +32,8 @@ export const useStore = defineStore('store', {
     return {
       user_id: 'testid',
       user_name: 'testname',
+      avatar: undefined,
+      email: '1111@bbb.com',
       projectList: [
         {
           name: "Eat an apple everyday in Feb.",
