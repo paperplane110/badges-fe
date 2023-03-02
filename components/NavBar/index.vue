@@ -55,7 +55,7 @@
           Github<span class="material-icons align-middle">open_in_new</span>
         </NuxtLink>
         <button class="grid place-items-center w-12 h-12 rounded-1 bg-sky-600 text-white text-xl">
-          Ty
+          {{ nameFirstLetter }}
         </button>
       </div>
     </div>
@@ -63,6 +63,19 @@
 </template>
 
 <script setup lang='ts'>
+import { useStore } from '~~/composables/store';
+
+// get abbr of username or avatar
+const store = useStore()
+let nameFirstLetter = ref("")
+if (store.avatar) {
+  // TODO use avatar
+} else {
+  // use the first letter/charactor as the avatar
+  nameFirstLetter.value = store.user_name[0].toUpperCase()
+}
+
+
 const routeActivated = computed(() => (to: string) => {
   const route = useRoute()
   const rootRoute = `/${route.path.split('/')[1]}`
