@@ -73,7 +73,7 @@ if (store.avatar) {
   // TODO use avatar
 } else {
   // use the first letter/charactor as the avatar
-  nameFirstLetter.value = store.user_name[0].toUpperCase()
+  nameFirstLetter.value = store.username[0].toUpperCase()
 }
 
 

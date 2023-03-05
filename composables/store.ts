@@ -30,8 +30,8 @@ interface tag {
 export const useStore = defineStore('store', {
   state: () => {
     return {
-      user_id: 'testid',
-      user_name: 'testname',
+      userId: 'testid',
+      username: 'testname',
       avatar: undefined,
       email: '1111@bbb.com',
       projectList: [
