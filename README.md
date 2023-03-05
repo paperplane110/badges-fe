@@ -2,7 +2,9 @@
 
 The front end of `Badges`.
 
-## Setup
+## Setup: 
+
+**Node**: node:16^
 
 Make sure to install the dependencies:
 
