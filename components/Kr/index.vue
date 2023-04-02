@@ -1,5 +1,6 @@
 <template>
-  <div class="group flex items-center gap-4 p-3 rounded-2xl max-w-150 cursor-pointer hover:(bg-gray-200)" @click="press">
+  <div class="group flex items-center gap-4 p-3 rounded-2xl max-w-150 cursor-pointer hover:(bg-gray-200)"
+    @click.stop="press">
     <div class="pushable">
       <span class="front" :class="props.status">✓</span>
     </div>
@@ -15,12 +16,16 @@ type krProps = {
   idx: number
   contents: string
   status: string
+
+  // index'th element in krList
+  index: number
 }
 const props = defineProps<krProps>()
 
 const press = () => {
+  console.log(props.index)
   // change status
-  const cur = store.projectList[props.pIdx].krList[props.idx].status
+  const cur = store.projectList[props.pIdx].krList[props.index].status
   if (cur === 'undone') {
     store.changeKrStatus(props.pIdx, props.idx, 'done')
   } else {

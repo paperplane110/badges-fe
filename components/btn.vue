@@ -1,5 +1,5 @@
 <template>
-  <button class=" flex justify-center items-center p-1 transition-shadow hover:shadow-md">
+  <button class="flex justify-center items-center p-1">
     <slot />
   </button>
 </template>
